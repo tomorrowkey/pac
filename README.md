@@ -48,6 +48,13 @@ https://your-s3-bucket-name.s3.amazonaws.com/your-name.pac
 $ pac disable
 ```
 
+# Installation
+
+```sh
+$ brew tap tomorrowkey/self
+$ brew update && brew install tomorrowkey/self/pac
+```
+
 # License
 
 ```
