@@ -80,6 +80,10 @@ class Pac
       ensure_cli_available!('aws')
 
       `aws s3 cp #{file.path} s3://#{disaptch_config['bucket']}#{disaptch_config['path']}#{pac_filename}`
+    elsif disaptch_config = config['gcs']
+      ensure_cli_available!('gsutil')
+
+      `gsutil cp #{file.path} gs://#{disaptch_config['bucket']}#{disaptch_config['path']}#{pac_filename}`
     else
       STDERR.puts <<~EOS
       No upload configurations in #{CONFIG_PATH}
