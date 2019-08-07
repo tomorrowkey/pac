@@ -19,10 +19,21 @@ You just have to do is configure proxy for PAC. That's it.
 
 Config file locate at `~/.pac/config.yml`. You have to config for PAC file location.
 
+### For Amazon S3
+
 ```yaml
 ---
 s3:
   bucket: your-s3-bucket-name
+  path: /
+```
+
+### For Google Cloud Storage
+
+```yaml
+---
+gcs:
+  bucket: 'your-gcs-bucket-name'
   path: /
 ```
 
